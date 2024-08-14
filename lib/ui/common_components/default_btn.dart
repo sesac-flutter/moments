@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:moments/ui/styles/color_styles.dart';
+import 'package:moments/ui/styles/size_config.dart';
 
 class DefaultBtn extends StatelessWidget {
   final String text;
@@ -39,8 +40,8 @@ class DefaultBtn extends StatelessWidget {
         backgroundColor:
             isActive ? btnColor ?? ColorStyles.primary : ColorStyles.gray4,
         minimumSize: Size(
-          width ?? 335,
-          height ?? 56,
+          width ?? getWidth(335),
+          height ?? getHeight(56),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),
@@ -53,17 +54,17 @@ class DefaultBtn extends StatelessWidget {
           Text(
             text,
             style: TextStyle(
-              fontSize: fontSize ?? 16,
+              fontSize: fontSize ?? getHeight(16),
               fontFamily: 'Pretendard',
               fontWeight: FontWeight.w600,
             ),
           ),
           if (hasIcon != null) ...[
-            const SizedBox(width: 16),
+            SizedBox(width: getWidth(16)),
             SvgPicture.asset(
               iconPath ?? '',
-              width: iconSize ?? 20,
-              height: iconSize ?? 20,
+              width: iconSize ?? getWidth(20),
+              height: iconSize ?? getHeight(20),
               colorFilter:
                   const ColorFilter.mode(ColorStyles.white, BlendMode.srcIn),
             ),
