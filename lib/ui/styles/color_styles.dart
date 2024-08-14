@@ -11,4 +11,6 @@ abstract class ColorStyles {
   static const Color primary = Color(0xFFFF7F50);
 
   static const Color secondary = Color(0xFF3E5F8F);
+
+  static const Color background = Color(0xFFF8F8F8);
 }
