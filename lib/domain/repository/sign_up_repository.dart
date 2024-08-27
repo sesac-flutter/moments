@@ -10,9 +10,4 @@ abstract interface class SignUpRepository {
     String? image,
     String? prefix,
   });
-
-  Future<void> signUp({
-    required String email,
-    required String password,
-  });
 }
