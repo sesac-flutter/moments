@@ -17,8 +17,15 @@ class SignUpRepositoryImpl implements SignUpRepository {
       required String role,
       required String familyCode,
       String? image,
-      String? prefix}) {
-    // TODO: implement signUpUser
-    throw UnimplementedError();
+      String? prefix}) async {
+    final uid = await _dataSource.signUp(email: email, password: password);
+    final user = await _dataSource.createUser(
+        uid: uid,
+        birth: birth,
+        role: role,
+        familyCode: familyCode,
+        image: image,
+        prefix: prefix);
+    return user;
   }
 }
