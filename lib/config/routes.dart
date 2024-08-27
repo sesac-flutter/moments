@@ -6,7 +6,7 @@ import 'package:moments/presentation/main/main_screen.dart';
 import 'package:moments/presentation/main/main_screen_view_model.dart';
 import 'package:moments/presentation/sign_up/ask_family_code_screen.dart';
 import 'package:moments/presentation/sign_up/family_code_screen.dart';
-import 'package:moments/presentation/sign_up/optional_info.dart';
+import 'package:moments/presentation/sign_up/optional_info_screen.dart';
 import 'package:moments/presentation/sign_up/required_info_screen.dart';
 import 'package:moments/presentation/sign_up/sign_up_screen.dart';
 import 'package:moments/presentation/sign_up/sign_up_view_model.dart';
@@ -34,7 +34,7 @@ class Routes {
           builder: (BuildContext context, GoRouterState state) =>
               const LogInScreen()),
       GoRoute(
-          path: 'sign_up',
+          path: '/sign_up',
           builder: (BuildContext context, GoRouterState state) {
             return ChangeNotifierProvider<SignUpViewModel>(
               create: (context) => getIt(),
@@ -42,7 +42,7 @@ class Routes {
             );
           }),
       GoRoute(
-          path: 'ask_code',
+          path: '/ask_code',
           builder: (BuildContext context, GoRouterState state) {
             return ChangeNotifierProvider<SignUpViewModel>(
               create: (context) => getIt(),
@@ -50,7 +50,7 @@ class Routes {
             );
           }),
       GoRoute(
-          path: 'family_code',
+          path: '/family_code',
           builder: (BuildContext context, GoRouterState state) {
             return ChangeNotifierProvider<SignUpViewModel>(
               create: (context) => getIt(),
@@ -58,7 +58,7 @@ class Routes {
             );
           }),
       GoRoute(
-          path: 'required_info',
+          path: '/required_info',
           builder: (BuildContext context, GoRouterState state) {
             return ChangeNotifierProvider<SignUpViewModel>(
               create: (context) => getIt(),
@@ -66,7 +66,7 @@ class Routes {
             );
           }),
       GoRoute(
-          path: 'optional_info',
+          path: '/optional_info',
           builder: (BuildContext context, GoRouterState state) {
             return ChangeNotifierProvider<SignUpViewModel>(
               create: (context) => getIt(),

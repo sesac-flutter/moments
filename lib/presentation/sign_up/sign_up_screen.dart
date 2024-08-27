@@ -53,18 +53,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
             hinText: '비밀번호를 입력해주세요',
             controller: confirmPasswordController,
           ),
-          DefaultBtn(
-              width: getWidth(335),
-              height: getHeight(56),
-              text: '다음',
-              onPressed: () {
-                viewModel.getEmail(emailController.text);
-                viewModel.getPassword(passwordController.text);
-                viewModel.confirmPassword(confirmPasswordController.text, () {
-                  context.push('/ask_code');
-                });
-                // viewModel.signUpForTest();
-              }),
+          Center(
+            child: DefaultBtn(
+                width: getWidth(335),
+                height: getHeight(56),
+                text: '다음',
+                onPressed: () {
+                  viewModel.getEmail(emailController.text);
+                  viewModel.getPassword(passwordController.text);
+                  viewModel.confirmPassword(confirmPasswordController.text, () {
+                    context.push('/ask_code');
+                  });
+                  // viewModel.signUpForTest();
+                }),
+          ),
         ],
       ),
     );

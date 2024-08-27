@@ -24,20 +24,24 @@ class _AskFamilyCodeScreenState extends State<AskFamilyCodeScreen> {
           const SizedBox(
             height: 200,
           ),
-          DefaultBtn(
-            text: '네, 있습니다.',
-            onPressed: () {
-              context.push('/family_code');
-            },
-            width: getWidth(335),
-            height: getHeight(56),
-          ),
-          DefaultBtn(
-              text: '아니요, 없습니다.',
+          Center(
+            child: DefaultBtn(
+              text: '네, 있습니다.',
               onPressed: () {
-                viewModel.generateFamilyCode();
-                context.push('/required_info');
-              }),
+                context.push('/family_code');
+              },
+              width: getWidth(335),
+              height: getHeight(56),
+            ),
+          ),
+          Center(
+            child: DefaultBtn(
+                text: '아니요, 없습니다.',
+                onPressed: () {
+                  viewModel.generateFamilyCode();
+                  context.push('/required_info');
+                }),
+          ),
         ],
       ),
     );

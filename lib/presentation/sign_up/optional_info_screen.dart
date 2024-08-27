@@ -29,25 +29,25 @@ class _OptionalInfoScreenState extends State<OptionalInfoScreen> {
       appBar: AppBar(),
       body: Column(
         children: [
-          SignUpInfo(info: '선택 정보'),
+          const SignUpInfo(info: '선택 정보'),
           ElevatedButton(
             onPressed: () {},
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
           InputTextField(
             title: '수식어',
             hinText: '나는 어떤 가족인가요?',
             controller: prefixController,
           ),
-          DefaultBtn(
-              text: '완료하기',
-              onPressed: () async {
-                viewModel.getPrefix(prefixController.text);
-                await viewModel.signUp();
-                if (context.mounted) {
-                  context.go('/main');
-                }
-              }),
+          Center(
+            child: DefaultBtn(
+                text: '완료하기',
+                onPressed: () async {
+                  viewModel.getPrefix(prefixController.text);
+                  await viewModel.signUp();
+                  context.go('/log_in');
+                }),
+          ),
         ],
       ),
     );

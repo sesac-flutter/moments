@@ -33,7 +33,7 @@ class _RequiredInfoScreenState extends State<RequiredInfoScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SignUpInfo(info: '필수 정보'),
+          const SignUpInfo(info: '필수 정보'),
           InputTextField(
             title: '가족 구성원 역할 선택',
             hinText: '역할',
@@ -44,15 +44,17 @@ class _RequiredInfoScreenState extends State<RequiredInfoScreen> {
             hinText: 'YYYY-MM-DD',
             controller: birthController,
           ),
-          DefaultBtn(
-              width: getWidth(335),
-              height: getHeight(56),
-              text: '다음',
-              onPressed: () {
-                viewModel.getRole(roleController.text);
-                viewModel.getBirth(birthController.text);
-                context.push('/optional_info');
-              }),
+          Center(
+            child: DefaultBtn(
+                width: getWidth(335),
+                height: getHeight(56),
+                text: '다음',
+                onPressed: () {
+                  viewModel.getRole(roleController.text);
+                  viewModel.getBirth(birthController.text);
+                  context.push('/optional_info');
+                }),
+          ),
         ],
       ),
     );

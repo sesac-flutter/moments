@@ -39,14 +39,16 @@ class _FamilyCodeScreenState extends State<FamilyCodeScreen> {
           const SizedBox(
             height: 200,
           ),
-          DefaultBtn(
-              width: getWidth(335),
-              height: getHeight(56),
-              text: '다음',
-              onPressed: () {
-                viewModel.getFamilyCode(codeController.text);
-                context.push('/required_info');
-              }),
+          Center(
+            child: DefaultBtn(
+                width: getWidth(335),
+                height: getHeight(56),
+                text: '다음',
+                onPressed: () {
+                  viewModel.getFamilyCode(codeController.text);
+                  context.push('/required_info');
+                }),
+          ),
         ],
       ),
     );
