@@ -43,7 +43,7 @@ class SplashScreen extends StatelessWidget {
               child: DefaultBtn(
                 text: '시작하기',
                 onPressed: () {
-                  context.go('/');
+                  context.go('/log_in');
                 },
               )),
         ],

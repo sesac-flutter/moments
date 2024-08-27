@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:moments/presentation/log_in/log_in_screen.dart';
 import 'package:moments/presentation/main/main_screen.dart';
 import 'package:moments/presentation/main/main_screen_view_model.dart';
 import 'package:moments/presentation/splash/splash_screen.dart';
@@ -21,6 +22,10 @@ class Routes {
               child: const MainScreen(),
             );
           }),
+      GoRoute(
+          path: '/log_in',
+          builder: (BuildContext context, GoRouterState state) =>
+              const LogInScreen()),
     ],
   );
 }
