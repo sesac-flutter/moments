@@ -36,40 +36,40 @@ class Routes {
       GoRoute(
           path: '/sign_up',
           builder: (BuildContext context, GoRouterState state) {
-            return ChangeNotifierProvider<SignUpViewModel>(
-              create: (context) => getIt(),
+            return ChangeNotifierProvider.value(
+              value: getIt<SignUpViewModel>(),
               child: const SignUpScreen(),
             );
           }),
       GoRoute(
           path: '/ask_code',
           builder: (BuildContext context, GoRouterState state) {
-            return ChangeNotifierProvider<SignUpViewModel>(
-              create: (context) => getIt(),
+            return ChangeNotifierProvider.value(
+              value: getIt<SignUpViewModel>(),
               child: const AskFamilyCodeScreen(),
             );
           }),
       GoRoute(
           path: '/family_code',
           builder: (BuildContext context, GoRouterState state) {
-            return ChangeNotifierProvider<SignUpViewModel>(
-              create: (context) => getIt(),
+            return ChangeNotifierProvider.value(
+              value: getIt<SignUpViewModel>(),
               child: const FamilyCodeScreen(),
             );
           }),
       GoRoute(
           path: '/required_info',
           builder: (BuildContext context, GoRouterState state) {
-            return ChangeNotifierProvider<SignUpViewModel>(
-              create: (context) => getIt(),
+            return ChangeNotifierProvider.value(
+              value: getIt<SignUpViewModel>(),
               child: const RequiredInfoScreen(),
             );
           }),
       GoRoute(
           path: '/optional_info',
           builder: (BuildContext context, GoRouterState state) {
-            return ChangeNotifierProvider<SignUpViewModel>(
-              create: (context) => getIt(),
+            return ChangeNotifierProvider.value(
+              value: getIt<SignUpViewModel>(),
               child: const OptionalInfoScreen(),
             );
           }),
